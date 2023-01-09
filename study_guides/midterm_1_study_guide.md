@@ -27,6 +27,11 @@ Here are the key topics to study in preparation for the test.
 * Be able to define what Computer Architecture is
   * Be able to define ISA (Instruction Set Architecture)
   * Be able to define processor organization
+* Be able to differentiate memory latency and memory bandwidth
+* Be able to explain and apply the Roofline Model
+  * Be able to identify which component corresponds to memory bandwidth and peak performance
+  * Be able to explain why memory bandwidth features in the model, but not memory latency
+  * Be able to identify application characteristics based on position in plot
 * Be able to describe application pull and examples of it
 * Be able to explain the reasoning behind the statement "an architecture is a compromise"
 
