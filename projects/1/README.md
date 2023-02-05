@@ -1,4 +1,4 @@
-- [CS/COE 1541 - Introduction to Computer Architecture](#cs-coe-1541---introduction-to-computer-architecture)
+- [CS 1541 - Introduction to Computer Architecture](#cs-1541---introduction-to-computer-architecture)
 - [Introduction](#introduction)
   * [Description](#description)
   * [Processor Design](#processor-design)
@@ -22,17 +22,17 @@
 - [Resources](#resources)
   * [GitHub Primer](#github-primer)
   * [Debugging C](#debugging-c)
+  * [Creating build environment on local machine](#creating-build-environment-on-local-machine)
+    + [For Windows 10 WSL or Linux](#for-windows-10-wsl-or-linux)
+    + [For Mac](#for-mac)
   * [Using DDD through remote X11 forwarding](#using-ddd-through-remote-x11-forwarding)
     + [For Windows 10](#for-windows-10)
     + [For MacOS](#for-macos)
     + [For Linux](#for-linux)
     + [Establishing SSH connection with X11 forwarding](#establishing-ssh-connection-with-x11-forwarding)
-  * [Using DDD by installing on local machine](#using-ddd-by-installing-on-local-machine)
-    + [For Windows 10 WSL or Linux](#for-windows-10-wsl-or-linux)
-    + [For Mac](#for-mac)
   * [DDD hang issue solution](#ddd-hang-issue-solution)
 
-# CS/COE 1541 - Introduction to Computer Architecture
+# CS 1541 - Introduction to Computer Architecture
 Spring Semester 2023 - Project 1
 
 Please accept Project 1 on **GitHub Classroom** using the following link:
@@ -764,68 +764,9 @@ If you want a graphical interface to GDB there is DDD (Data Display Debugger):
 GDB, Valgrind, and DDD are all available on thoth.cs.pitt.edu, but for you to
 be able to access the DDD GUI over SSH, you will need X11 forwarding enabled.
 
-## Using DDD through remote X11 forwarding
+## Creating build environment on local machine
 
-This is how you can use the DDD installation on thoth remotely.
-
-### For Windows 10
-
-Enabling X11 forwarding on Windows 10 is a bit complicated since you have to do
-deal with Windows firewall.  Here is an easy to follow guide written by another
-Computer Architecture professor from the University of Illinois (which also
-happens to be my alma mater :).
-
-* If you have WSL1 installed: https://cs233.github.io/oyom_wsl1_setup.html
-* If you have WSL2 installed: https://cs233.github.io/oyom_wsl2_setup.html
-
-### For MacOS
-
-Enabling X11 forwarding on Mac systems is more straightforward.  All you have to do install XQuartz and launch it:
-
-* XQuartz download URL: https://www.xquartz.org/
-
-### For Linux
-
-For most Linux systems, X11 forwarding should be built-in with the X windows
-system, so no additional installations are needed.
-
-### Establishing SSH connection with X11 forwarding
-
-After enabling X11 forwarding, you have to specify X11 forwarding on your SSH
-connection.  When you connect to thoth, use the following commandline:
-
-```
-ssh -XC USERNAME@thoth.cs.pitt.edu
-```
-
-The -X option enables X11 forwarding and the -C option enables packet
-compression on your SSH connection so you can minimize the bandwidth consumed
-by X11 forwarding.
-
-If all goes well, after you log on to thoth, your $DISPLAY variable should be set up automatically.
-
-```
-wahn@thoth:~$ echo $DISPLAY
-localhost:10.0
-```
-
-If your $DISPLAY is not set up, then that means that something went wrong.
-Either VcXsrv (for Windows) or XQuartz (for Mac) was not set up or something
-else.  Note that you should not force set $DISPLAY on your .bashrc file.  That
-is not going to achieve anything.  $DISPLAY should be automatically set by SSH.
-
-Once the above is confirmed, you can start using any GUI app on thoth.  Now try
-launching DDD:
-
-```
-ddd
-```
-
-The DDD GUI should pop up on your machine momentarily.
-
-## Using DDD by installing on local machine
-
-This is how you can install DDD on your local machine.
+This is how you can install a g++ build and debug environment on your local laptop, in case you don't want to work in a remote environment.
 
 ### For Windows 10 WSL or Linux
 
@@ -884,6 +825,66 @@ brew install glib
 In the Makefile, replace all mentions of "five_stage_solution" to
 "five_stage_solution.mac".  The five_stage_solution binary was compiled on
 linux.cs.pitt.edu (a Linux machine) which cannot run on a Mac.
+
+## Using DDD through remote X11 forwarding
+
+In order to use DDD on linux.cs.pitt.edu, since DDD is a GUI application,
+you need enable X11 forwarding in your SSH connection.
+
+### For Windows 10
+
+Enabling X11 forwarding on Windows 10 is a bit complicated since you have to do
+deal with Windows firewall.  Here is an easy to follow guide written by another
+Computer Architecture professor from the University of Illinois (which also
+happens to be my alma mater :).
+
+* If you have WSL1 installed: https://cs233.github.io/oyom_wsl1_setup.html
+* If you have WSL2 installed: https://cs233.github.io/oyom_wsl2_setup.html
+
+### For MacOS
+
+Enabling X11 forwarding on Mac systems is more straightforward.  All you have to do install XQuartz and launch it:
+
+* XQuartz download URL: https://www.xquartz.org/
+
+### For Linux
+
+For most Linux systems, X11 forwarding should be built-in with the X windows
+system, so no additional installations are needed.
+
+### Establishing SSH connection with X11 forwarding
+
+After enabling X11 forwarding, you have to specify X11 forwarding on your SSH
+connection.  When you connect to thoth, use the following commandline:
+
+```
+ssh -XC USERNAME@thoth.cs.pitt.edu
+```
+
+The -X option enables X11 forwarding and the -C option enables packet
+compression on your SSH connection so you can minimize the bandwidth consumed
+by X11 forwarding.
+
+If all goes well, after you log on to thoth, your $DISPLAY variable should be set up automatically.
+
+```
+wahn@thoth:~$ echo $DISPLAY
+localhost:10.0
+```
+
+If your $DISPLAY is not set up, then that means that something went wrong.
+Either VcXsrv (for Windows) or XQuartz (for Mac) was not set up or something
+else.  Note that you should not force set $DISPLAY on your .bashrc file.  That
+is not going to achieve anything.  $DISPLAY should be automatically set by SSH.
+
+Once the above is confirmed, you can start using any GUI app on thoth.  Now try
+launching DDD:
+
+```
+ddd
+```
+
+The DDD GUI should pop up on your machine momentarily.
 
 ## DDD hang issue solution
 
