@@ -61,8 +61,11 @@ CS 1541 Computer Architecture
 
 * Class 2: Review for Midterm 1
 
-* Midterm 1 on GradeScope: TBD
+* Midterm 1 on GradeScope: Thursday (Mar. 2) 10:00 AM - Saturday (Mar. 4) 11:59 PM
   * Check out the **[study guide](/study_guides/midterm_1_study_guide.md)**!
+  * Will be posted as link named "Midterm 1" at Thursday 10:00 AM
+  * You will choose a 3 hour span to complete exam within the above 2-day period
+  * Your 3 hours begin the moment you click on link and agree to the terms on the next screen
   * Open book but individual work
   
 ## WEEK 9 (Week of 6 MAR)
