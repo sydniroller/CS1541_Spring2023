@@ -1,4 +1,4 @@
-# CS 1541 Midterm 2 Exam Study Guide - Spring 2022
+# CS 1541 Midterm 2 Exam Study Guide - Spring 2023
 
 Midterm 2 is going to be open book but individual work as before.  I will not
 take any questions during the midterm about the material that we learned, just
