@@ -1,0 +1,109 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'L1-dcache-loads:u'
+# Event count (approx.): 5408601665
+#
+# Overhead  Command       Shared Object  Symbol                       
+# ........  ............  .............  .............................
+#
+   100.00%  linked-list2  linked-list2   [.] run
+     0.00%  linked-list2  libc-2.17.so   [.] _dl_addr
+     0.00%  linked-list2  ld-2.17.so     [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list2  ld-2.17.so     [.] do_lookup_x
+     0.00%  linked-list2  ld-2.17.so     [.] strcmp
+     0.00%  linked-list2  ld-2.17.so     [.] _dl_next_ld_env_entry
+     0.00%  linked-list2  ld-2.17.so     [.] _dl_sysdep_start
+     0.00%  linked-list2  ld-2.17.so     [.] _dl_start
+     0.00%  linked-list2  libc-2.17.so   [.] __clone
+     0.00%  linked-list2  ld-2.17.so     [.] _start
+
+
+# Samples: 1K of event 'L1-dcache-load-misses:u'
+# Event count (approx.): 35486
+#
+# Overhead  Command       Shared Object       Symbol                       
+# ........  ............  ..................  .............................
+#
+    82.80%  linked-list2  linked-list2        [.] run
+     4.80%  linked-list2  ld-2.17.so          [.] do_lookup_x
+     2.68%  linked-list2  ld-2.17.so          [.] _dl_runtime_resolve_xsave
+     2.32%  linked-list2  [kernel]            [k] 0xffffffff91376c50
+     1.39%  linked-list2  ld-2.17.so          [.] _dl_relocate_object
+     1.10%  linked-list2  [kernel]            [k] 0xffffffff9136c730
+     1.02%  linked-list2  ld-2.17.so          [.] _dl_check_map_versions
+     0.99%  linked-list2  ld-2.17.so          [.] _dl_map_object_from_fd
+     0.98%  linked-list2  ld-2.17.so          [.] _dl_add_to_namespace_list
+     0.74%  linked-list2  ld-2.17.so          [.] dl_main
+     0.49%  linked-list2  ld-2.17.so          [.] _dl_fixup
+     0.34%  linked-list2  ld-2.17.so          [.] _dl_start
+     0.28%  linked-list2  libc-2.17.so        [.] __clone
+     0.05%  linked-list2  libpthread-2.17.so  [.] start_thread
+     0.01%  linked-list2  ld-2.17.so          [.] _start
+
+
+# Samples: 0  of event 'l2_rqsts.demand_data_rd_hit:u'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'l2_rqsts.demand_data_rd_miss:u'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 567  of event 'LLC-loads:u'
+# Event count (approx.): 11053
+#
+# Overhead  Command       Shared Object     Symbol                       
+# ........  ............  ................  .............................
+#
+    37.05%  linked-list2  linked-list2      [.] run
+    14.42%  linked-list2  ld-2.17.so        [.] _dl_relocate_object
+    11.90%  linked-list2  ld-2.17.so        [.] _dl_lookup_symbol_x
+     8.87%  linked-list2  ld-2.17.so        [.] do_lookup_x
+     7.31%  linked-list2  libc-2.17.so      [.] _dl_addr
+     6.09%  linked-list2  ld-2.17.so        [.] check_match.9523
+     3.60%  linked-list2  [kernel]          [k] 0xffffffff9136c730
+     3.47%  linked-list2  ld-2.17.so        [.] strcmp
+     3.28%  linked-list2  libc-2.17.so      [.] arena_get2.isra.3
+     2.25%  linked-list2  ld-2.17.so        [.] _dl_cache_libcmp
+     1.00%  linked-list2  libc-2.17.so      [.] res_thread_freeres
+     0.41%  linked-list2  ld-2.17.so        [.] _dl_runtime_resolve_xsave
+     0.13%  linked-list2  [kernel]          [k] 0xffffffff91376c50
+     0.13%  linked-list2  libc-2.17.so      [.] arena_thread_freeres
+     0.06%  linked-list2  ld-2.17.so        [.] _dl_debug_initialize
+     0.02%  linked-list2  libc-2.17.so      [.] __clone
+     0.01%  linked-list2  ld-2.17.so        [.] _dl_init_paths
+     0.01%  linked-list2  ld-2.17.so        [.] dl_main
+
+
+# Samples: 14  of event 'LLC-load-misses:u'
+# Event count (approx.): 1322
+#
+# Overhead  Command       Shared Object     Symbol                   
+# ........  ............  ................  .........................
+#
+    66.94%  linked-list2  ld-2.17.so        [.] _dl_lookup_symbol_x
+    30.18%  linked-list2  ld-2.17.so        [.] _dl_relocate_object
+     1.59%  linked-list2  [kernel]          [k] 0xffffffff9136c730
+     1.06%  linked-list2  libc-2.17.so      [.] free
+     0.08%  linked-list2  libc-2.17.so      [.] __libc_thread_freeres
+     0.08%  linked-list2  libc-2.17.so      [.] arena_thread_freeres
+     0.08%  linked-list2  libm-2.17.so      [.] __rintf
+
+
+#
+# (Tip: Sample related events with: perf record -e '{cycles,instructions}:S')
+#
+#    PID     TID  LLC-load-misses:u  LLC-loads:u  l2_rqsts.demand_data_rd_miss:u  l2_rqsts.demand_data_rd_hit:u  L1-dcache-load-misses:u  L1-dcache-loads:u
+  130872  130873                  0          267                             269                             88                      423                 17
+  130872  130874                 12         4514                            4557                           8072                    30320         5408323605

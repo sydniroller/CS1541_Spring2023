@@ -1,0 +1,122 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 18K of event 'L1-dcache-loads:u'
+# Event count (approx.): 5975542497
+#
+# Overhead  Command      Shared Object                 Symbol                       
+# ........  ...........  ............................  .............................
+#
+    99.96%  linked-list  linked-list                   [.] run
+     0.04%  linked-list  libc-2.17.so                  [.] malloc
+     0.01%  linked-list  libc-2.17.so                  [.] _int_malloc
+     0.00%  linked-list  [kernel]                      [k] 0xffffffff91375c30
+     0.00%  linked-list  linked-list                   [.] create
+     0.00%  linked-list  [kernel]                      [k] 0xffffffff9136c730
+     0.00%  linked-list  libc-2.17.so                  [.] sysmalloc
+     0.00%  linked-list  libc-2.17.so                  [.] _dl_addr
+     0.00%  linked-list  libgcc_s-4.8.5-20150702.so.1  [.] __cpu_indicator_init
+     0.00%  linked-list  libc-2.17.so                  [.] __ctype_init
+     0.00%  linked-list  ld-2.17.so                    [.] _dl_lookup_symbol_x
+     0.00%  linked-list  ld-2.17.so                    [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so                    [.] _dl_fixup
+     0.00%  linked-list  ld-2.17.so                    [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list  libc-2.17.so                  [.] __clone
+     0.00%  linked-list  [kernel]                      [k] 0xffffffff91376c50
+     0.00%  linked-list  ld-2.17.so                    [.] _start
+
+
+# Samples: 18K of event 'L1-dcache-load-misses:u'
+# Event count (approx.): 1098391953
+#
+# Overhead  Command      Shared Object       Symbol                       
+# ........  ...........  ..................  .............................
+#
+    99.99%  linked-list  linked-list         [.] run
+     0.01%  linked-list  [kernel]            [k] 0xffffffff91376c50
+     0.00%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list  libc-2.17.so        [.] malloc
+     0.00%  linked-list  ld-2.17.so          [.] strcmp
+     0.00%  linked-list  libc-2.17.so        [.] _int_malloc
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  libc-2.17.so        [.] sysmalloc
+     0.00%  linked-list  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so          [.] match_symbol
+     0.00%  linked-list  ld-2.17.so          [.] _dl_map_object_from_fd
+     0.00%  linked-list  linked-list         [.] create
+     0.00%  linked-list  [kernel]            [k] 0xffffffff91375c30
+     0.00%  linked-list  ld-2.17.so          [.] _dl_sysdep_start
+     0.00%  linked-list  ld-2.17.so          [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list  libc-2.17.so        [.] __ctype_init
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+     0.00%  linked-list  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list  ld-2.17.so          [.] _start
+
+
+# Samples: 713  of event 'l2_rqsts.demand_data_rd_hit:u'
+# Event count (approx.): 142602139
+#
+# Overhead  Command      Shared Object  Symbol 
+# ........  ...........  .............  .......
+#
+   100.00%  linked-list  linked-list    [.] run
+
+
+# Samples: 196  of event 'l2_rqsts.demand_data_rd_miss:u'
+# Event count (approx.): 39200588
+#
+# Overhead  Command      Shared Object  Symbol 
+# ........  ...........  .............  .......
+#
+   100.00%  linked-list  linked-list    [.] run
+
+
+# Samples: 18K of event 'LLC-loads:u'
+# Event count (approx.): 66991856
+#
+# Overhead  Command      Shared Object       Symbol                  
+# ........  ...........  ..................  ........................
+#
+    99.97%  linked-list  linked-list         [.] run
+     0.02%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list  [kernel]            [k] 0xffffffff91376c50
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  libc-2.17.so        [.] malloc
+     0.00%  linked-list  libpthread-2.17.so  [.] pthread_join
+     0.00%  linked-list  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list  libc-2.17.so        [.] sysmalloc
+     0.00%  linked-list  libc-2.17.so        [.] _int_malloc
+     0.00%  linked-list  ld-2.17.so          [.] strcmp
+     0.00%  linked-list  ld-2.17.so          [.] check_match.9523
+     0.00%  linked-list  ld-2.17.so          [.] _dl_map_object_deps
+     0.00%  linked-list  ld-2.17.so          [.] _dl_cache_libcmp
+     0.00%  linked-list  ld-2.17.so          [.] _dl_important_hwcaps
+     0.00%  linked-list  ld-2.17.so          [.] _dl_sysdep_start
+     0.00%  linked-list  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list  libc-2.17.so        [.] arena_get2.isra.3
+
+
+# Samples: 11K of event 'LLC-load-misses:u'
+# Event count (approx.): 444560
+#
+# Overhead  Command      Shared Object     Symbol                 
+# ........  ...........  ................  .......................
+#
+    99.30%  linked-list  linked-list       [.] run
+     0.24%  linked-list  ld-2.17.so        [.] _dl_lookup_symbol_x
+     0.21%  linked-list  ld-2.17.so        [.] do_lookup_x
+     0.17%  linked-list  ld-2.17.so        [.] _dl_relocate_object
+     0.05%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.02%  linked-list  [kernel]          [k] 0xffffffff91376c50
+     0.01%  linked-list  ld-2.17.so        [.] strcmp
+     0.00%  linked-list  ld-2.17.so        [.] _dl_fixup
+
+
+#
+# (Tip: For a higher level overview, try: perf report --sort comm,dso)
+#
+#    PID     TID  LLC-load-misses:u  LLC-loads:u  l2_rqsts.demand_data_rd_miss:u  l2_rqsts.demand_data_rd_hit:u  L1-dcache-load-misses:u  L1-dcache-loads:u
+  130690  130691                 45        12288                           14928                           2841                    22532            2578218
+  130690  130692             441702     66971537                        39314695                      142789515               1098340080         5972704176

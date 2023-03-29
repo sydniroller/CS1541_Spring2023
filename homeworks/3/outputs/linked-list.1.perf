@@ -1,0 +1,60 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 15K of event 'cycles:u'
+# Event count (approx.): 11411121282
+#
+# Overhead  Command      Shared Object       Symbol                  
+# ........  ...........  ..................  ........................
+#
+    99.94%  linked-list  linked-list         [.] run
+     0.04%  linked-list  [kernel]            [k] 0xffffffff91376c50
+     0.01%  linked-list  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list  libpthread-2.17.so  [.] deregister_tm_clones
+     0.00%  linked-list  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list  ld-2.17.so          [.] check_match.9523
+     0.00%  linked-list  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+     0.00%  linked-list  ld-2.17.so          [.] _start
+
+
+# Samples: 15K of event 'instructions:u'
+# Event count (approx.): 29168696763
+#
+# Overhead  Command      Shared Object       Symbol                    
+# ........  ...........  ..................  ..........................
+#
+    99.99%  linked-list  linked-list         [.] run
+     0.00%  linked-list  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  libc-2.17.so        [.] _dl_addr
+     0.00%  linked-list  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so          [.] _dl_check_map_versions
+     0.00%  linked-list  ld-2.17.so          [.] malloc
+     0.00%  linked-list  ld-2.17.so          [.] _dl_next_ld_env_entry
+     0.00%  linked-list  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+     0.00%  linked-list  ld-2.17.so          [.] _start
+
+
+# Samples: 88  of event 'cycle_activity.stalls_mem_any:u'
+# Event count (approx.): 176000264
+#
+# Overhead  Command      Shared Object  Symbol 
+# ........  ...........  .............  .......
+#
+   100.00%  linked-list  linked-list    [.] run
+
+
+#
+# (Tip: Sample related events with: perf record -e '{cycles,instructions}:S')
+#
+#    PID     TID  cycle_activity.stalls_mem_any:u  instructions:u     cycles:u
+  130028  130029                            15385            7705        38830
+  130028  130030                        177522323     29166701608  11408135643

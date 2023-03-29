@@ -1,0 +1,97 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 13K of event 'L1-dcache-loads:u'
+# Event count (approx.): 6005942272
+#
+# Overhead  Command      Shared Object     Symbol                       
+# ........  ...........  ................  .............................
+#
+   100.00%  linked-list  linked-list       [.] run
+     0.00%  linked-list  libc-2.17.so      [.] malloc
+     0.00%  linked-list  ld-2.17.so        [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so        [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so        [.] _dl_add_to_namespace_list
+     0.00%  linked-list  ld-2.17.so        [.] _dl_check_map_versions
+     0.00%  linked-list  ld-2.17.so        [.] _dl_map_object_from_fd
+     0.00%  linked-list  ld-2.17.so        [.] check_match.9523
+     0.00%  linked-list  ld-2.17.so        [.] _dl_next_ld_env_entry
+     0.00%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.00%  linked-list  ld-2.17.so        [.] strcmp
+     0.00%  linked-list  ld-2.17.so        [.] _dl_fixup
+     0.00%  linked-list  libc-2.17.so      [.] __clone
+     0.00%  linked-list  ld-2.17.so        [.] _start
+
+
+# Samples: 13K of event 'L1-dcache-load-misses:u'
+# Event count (approx.): 1104131240
+#
+# Overhead  Command      Shared Object       Symbol                       
+# ........  ...........  ..................  .............................
+#
+   100.00%  linked-list  linked-list         [.] run
+     0.00%  linked-list  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list  ld-2.17.so          [.] _dl_check_map_versions
+     0.00%  linked-list  ld-2.17.so          [.] strcmp
+     0.00%  linked-list  ld-2.17.so          [.] _dl_map_object_from_fd
+     0.00%  linked-list  libpthread-2.17.so  [.] _setjmp@plt
+     0.00%  linked-list  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list  ld-2.17.so          [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+     0.00%  linked-list  ld-2.17.so          [.] _start
+
+
+# Samples: 13  of event 'l2_rqsts.demand_data_rd_hit:u'
+# Event count (approx.): 2600039
+#
+# Overhead  Command      Shared Object  Symbol 
+# ........  ...........  .............  .......
+#
+   100.00%  linked-list  linked-list    [.] run
+
+
+# Samples: 1  of event 'l2_rqsts.demand_data_rd_miss:u'
+# Event count (approx.): 200003
+#
+# Overhead  Command      Shared Object  Symbol 
+# ........  ...........  .............  .......
+#
+   100.00%  linked-list  linked-list    [.] run
+
+
+# Samples: 3K of event 'LLC-loads:u'
+# Event count (approx.): 400858
+#
+# Overhead  Command      Shared Object     Symbol                 
+# ........  ...........  ................  .......................
+#
+    98.32%  linked-list  linked-list       [.] run
+     0.83%  linked-list  ld-2.17.so        [.] _dl_lookup_symbol_x
+     0.36%  linked-list  libc-2.17.so      [.] _dl_addr
+     0.31%  linked-list  [kernel]          [k] 0xffffffff91376c50
+     0.18%  linked-list  ld-2.17.so        [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so        [.] strcmp
+
+
+# Samples: 5  of event 'LLC-load-misses:u'
+# Event count (approx.): 275
+#
+# Overhead  Command      Shared Object  Symbol                 
+# ........  ...........  .............  .......................
+#
+    84.36%  linked-list  ld-2.17.so     [.] _dl_relocate_object
+    15.64%  linked-list  ld-2.17.so     [.] _dl_lookup_symbol_x
+
+
+#
+# (Tip: For memory address profiling, try: perf mem record / perf mem report)
+#
+#    PID     TID  LLC-load-misses:u  LLC-loads:u  l2_rqsts.demand_data_rd_miss:u  l2_rqsts.demand_data_rd_hit:u  L1-dcache-load-misses:u  L1-dcache-loads:u
+  130640  130641                  0            0                             298                            162                      553              41434
+  130640  130642                  0       395326                          346797                        2719569               1104073781         6005553216

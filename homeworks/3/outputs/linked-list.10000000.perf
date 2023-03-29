@@ -1,0 +1,83 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 97K of event 'cycles:u'
+# Event count (approx.): 51907610516
+#
+# Overhead  Command      Shared Object     Symbol                 
+# ........  ...........  ................  .......................
+#
+    95.92%  linked-list  linked-list       [.] run
+     2.28%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.86%  linked-list  libc-2.17.so      [.] malloc
+     0.62%  linked-list  libc-2.17.so      [.] _int_malloc
+     0.19%  linked-list  libc-2.17.so      [.] sysmalloc
+     0.08%  linked-list  linked-list       [.] create
+     0.03%  linked-list  [kernel]          [k] 0xffffffff91376c50
+     0.02%  linked-list  [kernel]          [k] 0xffffffff91375c30
+     0.01%  linked-list  libc-2.17.so      [.] __GI___mprotect
+     0.00%  linked-list  [kernel]          [k] 0xffffffff91377f00
+     0.00%  linked-list  ld-2.17.so        [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so        [.] _dl_lookup_symbol_x
+     0.00%  linked-list  ld-2.17.so        [.] check_match.9523
+     0.00%  linked-list  ld-2.17.so        [.] strcmp
+     0.00%  linked-list  libc-2.17.so      [.] new_heap
+     0.00%  linked-list  ld-2.17.so        [.] _dl_catch_error
+     0.00%  linked-list  ld-2.17.so        [.] _dl_setup_hash
+     0.00%  linked-list  libc-2.17.so      [.] __clone
+     0.00%  linked-list  ld-2.17.so        [.] _dl_start
+     0.00%  linked-list  ld-2.17.so        [.] _start
+
+
+# Samples: 97K of event 'instructions:u'
+# Event count (approx.): 23050163063
+#
+# Overhead  Command      Shared Object       Symbol                    
+# ........  ...........  ..................  ..........................
+#
+    90.87%  linked-list  linked-list         [.] run
+     5.57%  linked-list  libc-2.17.so        [.] malloc
+     3.02%  linked-list  libc-2.17.so        [.] _int_malloc
+     0.31%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.10%  linked-list  [kernel]            [k] 0xffffffff91375c30
+     0.08%  linked-list  libc-2.17.so        [.] sysmalloc
+     0.04%  linked-list  linked-list         [.] create
+     0.00%  linked-list  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  libc-2.17.so        [.] getenv
+     0.00%  linked-list  libc-2.17.so        [.] __GI___mprotect
+     0.00%  linked-list  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so          [.] _dl_check_map_versions
+     0.00%  linked-list  ld-2.17.so          [.] _dl_map_object
+     0.00%  linked-list  ld-2.17.so          [.] strcmp
+     0.00%  linked-list  ld-2.17.so          [.] _dl_map_object_from_fd
+     0.00%  linked-list  ld-2.17.so          [.] strchr
+     0.00%  linked-list  ld-2.17.so          [.] _dl_sysdep_start
+     0.00%  linked-list  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list  ld-2.17.so          [.] _dl_fixup
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+     0.00%  linked-list  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list  ld-2.17.so          [.] _start
+
+
+# Samples: 17K of event 'cycle_activity.stalls_mem_any:u'
+# Event count (approx.): 35320052980
+#
+# Overhead  Command      Shared Object     Symbol                
+# ........  ...........  ................  ......................
+#
+    99.22%  linked-list  linked-list       [.] run
+     0.52%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.13%  linked-list  libc-2.17.so      [.] _int_malloc
+     0.11%  linked-list  libc-2.17.so      [.] malloc
+     0.02%  linked-list  libc-2.17.so      [.] sysmalloc
+
+
+#
+# (Tip: Profiling branch (mis)predictions with: perf record -b / perf report)
+#
+#    PID     TID  cycle_activity.stalls_mem_any:u  instructions:u     cycles:u
+  130338  130339                        145454916      2046168733   1135816787
+  130338  130341                      35177160483     21002315843  50769909210

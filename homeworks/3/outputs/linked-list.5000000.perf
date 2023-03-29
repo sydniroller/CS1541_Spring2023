@@ -1,0 +1,80 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 90K of event 'cycles:u'
+# Event count (approx.): 49726935909
+#
+# Overhead  Command      Shared Object     Symbol                 
+# ........  ...........  ................  .......................
+#
+    97.90%  linked-list  linked-list       [.] run
+     1.13%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.45%  linked-list  libc-2.17.so      [.] malloc
+     0.34%  linked-list  libc-2.17.so      [.] _int_malloc
+     0.10%  linked-list  libc-2.17.so      [.] sysmalloc
+     0.04%  linked-list  linked-list       [.] create
+     0.03%  linked-list  [kernel]          [k] 0xffffffff91376c50
+     0.01%  linked-list  [kernel]          [k] 0xffffffff91375c30
+     0.00%  linked-list  libc-2.17.so      [.] __GI___mprotect
+     0.00%  linked-list  [kernel]          [k] 0xffffffff91377f00
+     0.00%  linked-list  ld-2.17.so        [.] _dl_lookup_symbol_x
+     0.00%  linked-list  ld-2.17.so        [.] _dl_relocate_object
+     0.00%  linked-list  libc-2.17.so      [.] _dl_addr
+     0.00%  linked-list  ld-2.17.so        [.] check_match.9523
+     0.00%  linked-list  linked-list       [.] malloc@plt
+     0.00%  linked-list  ld-2.17.so        [.] strcmp
+     0.00%  linked-list  ld-2.17.so        [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so        [.] _dl_start
+     0.00%  linked-list  libc-2.17.so      [.] __clone
+     0.00%  linked-list  ld-2.17.so        [.] _dl_fixup
+     0.00%  linked-list  ld-2.17.so        [.] _start
+
+
+# Samples: 90K of event 'instructions:u'
+# Event count (approx.): 22025749805
+#
+# Overhead  Command      Shared Object       Symbol                    
+# ........  ...........  ..................  ..........................
+#
+    95.24%  linked-list  linked-list         [.] run
+     2.88%  linked-list  libc-2.17.so        [.] malloc
+     1.57%  linked-list  libc-2.17.so        [.] _int_malloc
+     0.15%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.09%  linked-list  [kernel]            [k] 0xffffffff91375c30
+     0.05%  linked-list  libc-2.17.so        [.] sysmalloc
+     0.02%  linked-list  linked-list         [.] create
+     0.00%  linked-list  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list  [kernel]            [k] 0xffffffff91376c50
+     0.00%  linked-list  ld-2.17.so          [.] strcmp
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so          [.] _dl_check_map_versions
+     0.00%  linked-list  ld-2.17.so          [.] strlen
+     0.00%  linked-list  ld-2.17.so          [.] _dl_next_ld_env_entry
+     0.00%  linked-list  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+     0.00%  linked-list  ld-2.17.so          [.] _start
+
+
+# Samples: 17K of event 'cycle_activity.stalls_mem_any:u'
+# Event count (approx.): 34404051606
+#
+# Overhead  Command      Shared Object     Symbol                
+# ........  ...........  ................  ......................
+#
+    99.61%  linked-list  linked-list       [.] run
+     0.26%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.06%  linked-list  libc-2.17.so      [.] _int_malloc
+     0.06%  linked-list  libc-2.17.so      [.] malloc
+     0.01%  linked-list  [kernel]          [k] 0xffffffff91375c30
+
+
+#
+# (Tip: Create an archive with symtabs to analyse on other machine: perf archive)
+#
+#    PID     TID  cycle_activity.stalls_mem_any:u  instructions:u     cycles:u
+  130304  130305                         74754908      1023088624    569845502
+  130304  130307                      34331162367     21001127936  49155277852

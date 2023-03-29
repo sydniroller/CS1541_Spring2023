@@ -1,0 +1,69 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 11K of event 'cycles:u'
+# Event count (approx.): 8638706075
+#
+# Overhead  Command       Shared Object       Symbol                   
+# ........  ............  ..................  .........................
+#
+    99.97%  linked-list2  linked-list2        [.] run
+     0.01%  linked-list2  [kernel]            [k] 0xffffffff91376c50
+     0.00%  linked-list2  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list2  libm-2.17.so        [.] __do_global_dtors_aux
+     0.00%  linked-list2  libc-2.17.so        [.] _int_malloc
+     0.00%  linked-list2  ld-2.17.so          [.] strcmp
+     0.00%  linked-list2  ld-2.17.so          [.] check_match.9523
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_load_cache_lookup
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_count_modids
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_fixup
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list2  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list2  libc-2.17.so        [.] __clone
+     0.00%  linked-list2  ld-2.17.so          [.] _start
+
+
+# Samples: 11K of event 'instructions:u'
+# Event count (approx.): 19303070038
+#
+# Overhead  Command       Shared Object       Symbol                    
+# ........  ............  ..................  ..........................
+#
+    99.99%  linked-list2  linked-list2        [.] run
+     0.00%  linked-list2  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list2  ld-2.17.so          [.] strcmp
+     0.00%  linked-list2  libc-2.17.so        [.] malloc
+     0.00%  linked-list2  libc-2.17.so        [.] arena_thread_freeres
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_check_map_versions
+     0.00%  linked-list2  ld-2.17.so          [.] memcmp
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_load_cache_lookup
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_name_match_p
+     0.00%  linked-list2  ld-2.17.so          [.] strlen
+     0.00%  linked-list2  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list2  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list2  libc-2.17.so        [.] __clone
+     0.00%  linked-list2  ld-2.17.so          [.] _start
+
+
+# Samples: 246  of event 'cycle_activity.stalls_mem_any:u'
+# Event count (approx.): 492000738
+#
+# Overhead  Command       Shared Object  Symbol 
+# ........  ............  .............  .......
+#
+   100.00%  linked-list2  linked-list2   [.] run
+
+
+#
+# (Tip: Create an archive with symtabs to analyse on other machine: perf archive)
+#
+#    PID     TID  cycle_activity.stalls_mem_any:u  instructions:u    cycles:u
+  130473  130474                            30806          208852      155735
+  130473  130475                        492097878     19300226511  8636472117

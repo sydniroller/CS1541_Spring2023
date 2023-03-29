@@ -1,0 +1,101 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 13K of event 'L1-dcache-loads:u'
+# Event count (approx.): 5991558282
+#
+# Overhead  Command      Shared Object     Symbol                       
+# ........  ...........  ................  .............................
+#
+   100.00%  linked-list  linked-list       [.] run
+     0.00%  linked-list  libc-2.17.so      [.] malloc
+     0.00%  linked-list  ld-2.17.so        [.] _dl_load_cache_lookup
+     0.00%  linked-list  ld-2.17.so        [.] _dl_map_object_from_fd
+     0.00%  linked-list  ld-2.17.so        [.] strcmp
+     0.00%  linked-list  ld-2.17.so        [.] _dl_setup_hash
+     0.00%  linked-list  ld-2.17.so        [.] _dl_sysdep_start
+     0.00%  linked-list  ld-2.17.so        [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so        [.] _dl_start
+     0.00%  linked-list  ld-2.17.so        [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list  libc-2.17.so      [.] __clone
+     0.00%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.00%  linked-list  ld-2.17.so        [.] _start
+
+
+# Samples: 13K of event 'L1-dcache-load-misses:u'
+# Event count (approx.): 1056983007
+#
+# Overhead  Command      Shared Object       Symbol                       
+# ........  ...........  ..................  .............................
+#
+   100.00%  linked-list  linked-list         [.] run
+     0.00%  linked-list  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so          [.] check_match.9523
+     0.00%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list  libc-2.17.so        [.] 0x000000000001f8c8
+     0.00%  linked-list  ld-2.17.so          [.] strcmp
+     0.00%  linked-list  ld-2.17.so          [.] _dl_check_map_versions
+     0.00%  linked-list  ld-2.17.so          [.] __libc_memalign
+     0.00%  linked-list  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list  ld-2.17.so          [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+     0.00%  linked-list  ld-2.17.so          [.] _start
+
+
+# Samples: 9  of event 'l2_rqsts.demand_data_rd_hit:u'
+# Event count (approx.): 1800027
+#
+# Overhead  Command      Shared Object  Symbol 
+# ........  ...........  .............  .......
+#
+   100.00%  linked-list  linked-list    [.] run
+
+
+# Samples: 0  of event 'l2_rqsts.demand_data_rd_miss:u'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 2K of event 'LLC-loads:u'
+# Event count (approx.): 134966
+#
+# Overhead  Command      Shared Object     Symbol                    
+# ........  ...........  ................  ..........................
+#
+    95.34%  linked-list  linked-list       [.] run
+     1.68%  linked-list  ld-2.17.so        [.] _dl_lookup_symbol_x
+     1.16%  linked-list  ld-2.17.so        [.] _dl_relocate_object
+     0.68%  linked-list  libc-2.17.so      [.] _dl_addr
+     0.51%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.42%  linked-list  ld-2.17.so        [.] match_symbol
+     0.14%  linked-list  ld-2.17.so        [.] _dl_load_cache_lookup
+     0.04%  linked-list  [kernel]          [k] 0xffffffff91376c50
+     0.03%  linked-list  [kernel]          [k] 0xffffffff91375c30
+     0.01%  linked-list  ld-2.17.so        [.] _dl_map_object_from_fd
+     0.00%  linked-list  ld-2.17.so        [.] mmap64
+
+
+# Samples: 6  of event 'LLC-load-misses:u'
+# Event count (approx.): 618
+#
+# Overhead  Command      Shared Object  Symbol                 
+# ........  ...........  .............  .......................
+#
+    67.48%  linked-list  ld-2.17.so     [.] _dl_relocate_object
+    32.52%  linked-list  ld-2.17.so     [.] _dl_lookup_symbol_x
+
+
+#
+# (Tip: To record callchains for each sample: perf record -g)
+#
+#    PID     TID  LLC-load-misses:u  LLC-loads:u  l2_rqsts.demand_data_rd_miss:u  l2_rqsts.demand_data_rd_hit:u  L1-dcache-load-misses:u  L1-dcache-loads:u
+  130620  130621                  0            0                             278                            142                      513              21816
+  130620  130622                  0       128728                          125532                        1976587               1056921740         5991252560

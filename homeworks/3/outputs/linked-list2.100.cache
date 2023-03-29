@@ -1,0 +1,100 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 7K of event 'L1-dcache-loads:u'
+# Event count (approx.): 5399500340
+#
+# Overhead  Command       Shared Object       Symbol                       
+# ........  ............  ..................  .............................
+#
+   100.00%  linked-list2  linked-list2        [.] run
+     0.00%  linked-list2  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list2  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list2  libc-2.17.so        [.] malloc
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_map_object
+     0.00%  linked-list2  ld-2.17.so          [.] match_symbol
+     0.00%  linked-list2  ld-2.17.so          [.] strcmp
+     0.00%  linked-list2  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list2  libc-2.17.so        [.] __clone
+     0.00%  linked-list2  ld-2.17.so          [.] _start
+
+
+# Samples: 2K of event 'L1-dcache-load-misses:u'
+# Event count (approx.): 445787
+#
+# Overhead  Command       Shared Object       Symbol                       
+# ........  ............  ..................  .............................
+#
+    96.10%  linked-list2  linked-list2        [.] run
+     0.85%  linked-list2  ld-2.17.so          [.] _dl_relocate_object
+     0.76%  linked-list2  ld-2.17.so          [.] do_lookup_x
+     0.61%  linked-list2  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.61%  linked-list2  [kernel]            [k] 0xffffffff91376c50
+     0.39%  linked-list2  ld-2.17.so          [.] check_match.9523
+     0.27%  linked-list2  ld-2.17.so          [.] strchr
+     0.22%  linked-list2  libpthread-2.17.so  [.] start_thread
+     0.09%  linked-list2  ld-2.17.so          [.] _dl_setup_hash
+     0.05%  linked-list2  libc-2.17.so        [.] __libc_thread_freeres
+     0.02%  linked-list2  ld-2.17.so          [.] _dl_runtime_resolve_xsave
+     0.02%  linked-list2  libc-2.17.so        [.] __clone
+     0.01%  linked-list2  [kernel]            [k] 0xffffffff9136c730
+     0.00%  linked-list2  ld-2.17.so          [.] _dl_start
+     0.00%  linked-list2  ld-2.17.so          [.] _start
+
+
+# Samples: 0  of event 'l2_rqsts.demand_data_rd_hit:u'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 0  of event 'l2_rqsts.demand_data_rd_miss:u'
+# Event count (approx.): 0
+#
+# Overhead  Command  Shared Object  Symbol
+# ........  .......  .............  ......
+#
+
+
+# Samples: 949  of event 'LLC-loads:u'
+# Event count (approx.): 19088
+#
+# Overhead  Command       Shared Object     Symbol                   
+# ........  ............  ................  .........................
+#
+    70.67%  linked-list2  linked-list2      [.] run
+    12.30%  linked-list2  ld-2.17.so        [.] do_lookup_x
+     8.19%  linked-list2  ld-2.17.so        [.] _dl_lookup_symbol_x
+     4.31%  linked-list2  libc-2.17.so      [.] __init_misc
+     3.61%  linked-list2  ld-2.17.so        [.] _dl_relocate_object
+     0.67%  linked-list2  libc-2.17.so      [.] __libc_thread_freeres
+     0.15%  linked-list2  [kernel]          [k] 0xffffffff91376c50
+     0.07%  linked-list2  libc-2.17.so      [.] arena_thread_freeres
+     0.03%  linked-list2  ld-2.17.so        [.] strcmp
+
+
+# Samples: 8  of event 'LLC-load-misses:u'
+# Event count (approx.): 294
+#
+# Overhead  Command       Shared Object     Symbol                   
+# ........  ............  ................  .........................
+#
+    79.25%  linked-list2  ld-2.17.so        [.] _dl_relocate_object
+    13.61%  linked-list2  ld-2.17.so        [.] do_lookup_x
+     4.08%  linked-list2  libc-2.17.so      [.] 0x000000000001f8c8
+     2.38%  linked-list2  ld-2.17.so        [.] _dl_lookup_symbol_x
+     0.34%  linked-list2  libc-2.17.so      [.] __libc_thread_freeres
+     0.34%  linked-list2  libc-2.17.so      [.] arena_thread_freeres
+
+
+#
+# (Tip: Use parent filter to see specific call path: perf report -p <regex>)
+#
+#    PID     TID  LLC-load-misses:u  LLC-loads:u  l2_rqsts.demand_data_rd_miss:u  l2_rqsts.demand_data_rd_hit:u  L1-dcache-load-misses:u  L1-dcache-loads:u
+  130892  130893                  0            0                             269                            116                      458               6179
+  130892  130894                 13        13554                           13634                          17699                   431215         5399127239

@@ -1,0 +1,123 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 68K of event 'L1-dcache-loads:u'
+# Event count (approx.): 6217927447
+#
+# Overhead  Command      Shared Object       Symbol                       
+# ........  ...........  ..................  .............................
+#
+    95.45%  linked-list  linked-list         [.] run
+     3.55%  linked-list  libc-2.17.so        [.] malloc
+     0.53%  linked-list  libc-2.17.so        [.] _int_malloc
+     0.30%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.09%  linked-list  linked-list         [.] create
+     0.04%  linked-list  [kernel]            [k] 0xffffffff91375c30
+     0.03%  linked-list  libc-2.17.so        [.] sysmalloc
+     0.00%  linked-list  [kernel]            [k] 0xffffffff91376c50
+     0.00%  linked-list  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so          [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+
+
+# Samples: 67K of event 'L1-dcache-load-misses:u'
+# Event count (approx.): 1080354860
+#
+# Overhead  Command      Shared Object       Symbol                       
+# ........  ...........  ..................  .............................
+#
+    99.52%  linked-list  linked-list         [.] run
+     0.37%  linked-list  [kernel]            [k] 0xffffffff9136c730
+     0.07%  linked-list  libc-2.17.so        [.] malloc
+     0.02%  linked-list  [kernel]            [k] 0xffffffff91375c30
+     0.01%  linked-list  [kernel]            [k] 0xffffffff91376c50
+     0.01%  linked-list  linked-list         [.] create
+     0.00%  linked-list  libc-2.17.so        [.] _int_malloc
+     0.00%  linked-list  libc-2.17.so        [.] sysmalloc
+     0.00%  linked-list  ld-2.17.so          [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so          [.] _dl_lookup_symbol_x
+     0.00%  linked-list  ld-2.17.so          [.] _dl_relocate_object
+     0.00%  linked-list  ld-2.17.so          [.] _dl_map_object_from_fd
+     0.00%  linked-list  ld-2.17.so          [.] _dl_sysdep_start
+     0.00%  linked-list  libpthread-2.17.so  [.] __madvise@plt
+     0.00%  linked-list  libc-2.17.so        [.] __ctype_init
+     0.00%  linked-list  ld-2.17.so          [.] _dl_runtime_resolve_xsave
+     0.00%  linked-list  libpthread-2.17.so  [.] start_thread
+     0.00%  linked-list  libc-2.17.so        [.] __clone
+     0.00%  linked-list  ld-2.17.so          [.] _dl_start
+
+
+# Samples: 352  of event 'l2_rqsts.demand_data_rd_hit:u'
+# Event count (approx.): 70401056
+#
+# Overhead  Command      Shared Object  Symbol    
+# ........  ...........  .............  ..........
+#
+    99.72%  linked-list  linked-list    [.] run
+     0.28%  linked-list  libc-2.17.so   [.] malloc
+
+
+# Samples: 313  of event 'l2_rqsts.demand_data_rd_miss:u'
+# Event count (approx.): 62600939
+#
+# Overhead  Command      Shared Object     Symbol                
+# ........  ...........  ................  ......................
+#
+    97.44%  linked-list  linked-list       [.] run
+     1.60%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.64%  linked-list  libc-2.17.so      [.] sysmalloc
+     0.32%  linked-list  libc-2.17.so      [.] malloc
+
+
+# Samples: 67K of event 'LLC-loads:u'
+# Event count (approx.): 168002432
+#
+# Overhead  Command      Shared Object     Symbol                             
+# ........  ...........  ................  ...................................
+#
+    99.10%  linked-list  linked-list       [.] run
+     0.78%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.05%  linked-list  libc-2.17.so      [.] malloc
+     0.03%  linked-list  [kernel]          [k] 0xffffffff91376c50
+     0.02%  linked-list  libc-2.17.so      [.] sysmalloc
+     0.01%  linked-list  libc-2.17.so      [.] _int_malloc
+     0.00%  linked-list  ld-2.17.so        [.] _dl_lookup_symbol_x
+     0.00%  linked-list  linked-list       [.] create
+     0.00%  linked-list  [kernel]          [k] 0xffffffff91375c30
+     0.00%  linked-list  ld-2.17.so        [.] do_lookup_x
+     0.00%  linked-list  ld-2.17.so        [.] _dl_map_object_from_fd
+     0.00%  linked-list  ld-2.17.so        [.] _dl_process_tunable_env_entries
+     0.00%  linked-list  libc-2.17.so      [.] _int_free
+     0.00%  linked-list  ld-2.17.so        [.] _dl_start
+     0.00%  linked-list  libc-2.17.so      [.] arena_get2.isra.3
+
+
+# Samples: 60K of event 'LLC-load-misses:u'
+# Event count (approx.): 134858663
+#
+# Overhead  Command      Shared Object     Symbol                 
+# ........  ...........  ................  .......................
+#
+    99.88%  linked-list  linked-list       [.] run
+     0.12%  linked-list  [kernel]          [k] 0xffffffff9136c730
+     0.00%  linked-list  [kernel]          [k] 0xffffffff91376c50
+     0.00%  linked-list  libc-2.17.so      [.] __run_exit_handlers
+     0.00%  linked-list  ld-2.17.so        [.] _dl_relocate_object
+     0.00%  linked-list  linked-list       [.] create
+     0.00%  linked-list  libc-2.17.so      [.] sysmalloc
+     0.00%  linked-list  libc-2.17.so      [.] _int_malloc
+     0.00%  linked-list  libc-2.17.so      [.] _int_free
+     0.00%  linked-list  [kernel]          [k] 0xffffffff91375c30
+     0.00%  linked-list  libc-2.17.so      [.] malloc
+     0.00%  linked-list  ld-2.17.so        [.] _dl_lookup_symbol_x
+
+
+#
+# (Tip: For hierarchical output, try: perf report --hierarchy)
+#
+#    PID     TID  LLC-load-misses:u  LLC-loads:u  l2_rqsts.demand_data_rd_miss:u  l2_rqsts.demand_data_rd_hit:u  L1-dcache-load-misses:u  L1-dcache-loads:u
+  130795  130796                266      1229520                         1465734                         310485                  2682499          266248234
+  130795  130799          134855456    166763446                        61291442                       70233434               1077645172         5951590972
